@@ -9,7 +9,7 @@
     "packages/shared-types"
   ],
   "scripts": {
-    "postinstall": "npm run build --workspace=packages/shared-types",
+    "postinstall": "npm run build --workspace=packages/shared-types && prisma generate",
     "dev:web": "npm run dev --workspace=apps/web",
     "dev:api": "npm run dev --workspace=apps/api",
     "build": "npm run build --workspace=packages/shared-types && npm run build --workspace=apps/api && npm run build --workspace=apps/web",
