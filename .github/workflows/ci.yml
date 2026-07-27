@@ -26,6 +26,11 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      # Building packages/shared-types happens automatically here via the
+      # root "postinstall" script (npm always runs it after install). That
+      # build produces dist/, which apps/api and apps/web resolve at runtime
+      # (Node/Vite module resolution, unlike tsc, doesn't honor tsconfig
+      # "paths" - it needs the real dist output to exist).
       - name: Install dependencies
         run: npm ci
 

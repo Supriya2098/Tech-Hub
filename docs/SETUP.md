@@ -15,6 +15,13 @@ From the repo root (this installs all three workspaces — `apps/api`, `apps/web
 npm install
 ```
 
+This also runs a root `postinstall` script that builds `packages/shared-types`
+(`tsc` → `dist/`). That build is what `apps/api` and `apps/web` actually
+resolve at runtime — `packages/shared-types/package.json` points `main`/`types`
+at `dist/`, and `dist/` is gitignored, so it never comes from git. Skipping
+install (or using `--ignore-scripts`) leaves that package unresolvable and
+breaks typecheck/test/build/dev for both apps.
+
 ## 2. Configure environment variables
 
 Because this is an npm-workspaces monorepo, each tool loads its own `.env`
