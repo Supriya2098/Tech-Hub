@@ -82,3 +82,6 @@ top bar (and on the login page).
 - [docs/API.md](docs/API.md) — full REST endpoint reference
 - [docs/SETUP.md](docs/SETUP.md) — local development setup
 - [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) — CI/CD pipeline, Vercel + Neon deployment
+
+  
+ ## Trigger deployment
