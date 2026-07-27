@@ -84,4 +84,4 @@ top bar (and on the login page).
 - [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) — CI/CD pipeline, Vercel + Neon deployment
 
   
- ## Trigger deployment
+ Trigger deployment at 8:25 PM
